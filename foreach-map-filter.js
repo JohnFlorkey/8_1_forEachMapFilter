@@ -41,7 +41,13 @@ Examples:
 
 */
 function showFirstAndLast(arr){
-    
+    const newArr = [];
+    arr.forEach(function(value){
+        let first = value[0];
+        let last = value[value.length - 1];
+        newArr.push(`${first}${last}`);
+    });
+    return newArr;
 }
 
 /*
