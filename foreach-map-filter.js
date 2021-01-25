@@ -23,7 +23,13 @@ Examples:
 
 */
 function onlyEvenValues(arr){
-    
+    const newArr = [];
+    arr.forEach(function(value){
+        if((value % 2) === 0){
+            newArr.push(value);
+        };
+    });
+    return newArr;
 }
 
 /*
