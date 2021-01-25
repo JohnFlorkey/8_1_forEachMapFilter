@@ -60,7 +60,10 @@ Examples:
 
 */
 function addKeyAndValue(arr,key,value){
-    
+    arr.forEach(function(item){
+        item[key] = value;
+    });
+    return arr;
 }
 
 /*
