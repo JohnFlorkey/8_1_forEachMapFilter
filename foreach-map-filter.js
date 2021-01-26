@@ -77,7 +77,22 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-   
+    const result = {};
+    const vowels = ['a','e','i','o','u'];
+    const lowerStr = str.toLowerCase();
+    // const splitStr = lowerStr.split();
+    vowels.forEach(function(vowel){
+        if(lowerStr.indexOf(vowel) !== -1){
+            let v = 0;
+            for(let char of lowerStr){
+                if(char === vowel){
+                    v++;
+                };
+            result[vowel] = v;
+            };
+        };
+    });
+    return result;
 }
 
 /*
@@ -88,7 +103,9 @@ Examples:
     doubleValuesWithMap([1,-2,-3]) // [2,-4,-6]
 */
 
-function doubleValuesWithMap(arr) {}
+function doubleValuesWithMap(arr) {
+
+}
 
 /*
 Write a function called valTimesIndex which accepts an array and returns a new array with each value multiplied by the index it is currently at in the array.
