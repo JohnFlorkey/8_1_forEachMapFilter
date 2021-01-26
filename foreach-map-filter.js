@@ -202,8 +202,11 @@ Examples:
 
 function removeVowels(str) {
     const lowerStr = str.toLowerCase();
-    const vowels = ['a','e','i','o','u'];
-
+    const vowels = 'aeiou';
+    const arr = Array.from(lowerStr);
+    return  arr.filter(function(value){
+        return vowels.indexOf(value) === -1;
+    }).join('');
 }
 
 /*
